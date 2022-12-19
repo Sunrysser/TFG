@@ -1,0 +1,179 @@
+body{
+    background-color: #fff8f8;
+    color: #171717;
+    font-family: 'Roboto Slab', serif;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    height: 100%;
+    width: 85%;
+    overflow-y: scroll;
+    padding: 2vw;
+}
+
+input{
+    color: #171717;
+    font-family: 'Roboto Slab', serif;
+    background-color: #f7e6d8;
+}
+
+.catsDiv{
+    height: 90%;
+    width: 100%;
+}
+
+.cats{
+    width: 100%;
+    background-color: #fff8f8;
+}
+
+.tools{
+    height: 10%;
+}
+
+tr{
+    background-color: #f7e6d8;
+    height: 4vw;
+}
+
+.cat{
+    background-color: #fff8f8;
+    font-size: calc(10px + 0.6vw);
+    font-weight: bold;
+}
+
+.cats, th, td{
+    text-align: center;
+    border: 0;
+}
+
+.separador{
+    height: 1px;
+    width: 100%;
+    background-color: #171717;
+}
+
+th{
+    width: 16.6%;
+}
+
+.tools{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 1vh;
+}
+
+input{
+    background-color: #171717;
+    color: #fff8f8;
+    padding: 10px;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+select{
+    background-color: #f7e6d8;
+    font-family: 'Roboto Slab', serif;
+    font-weight: bold;
+    font-size: calc(5px + 0.6vw);
+    border-radius: 5px;
+    padding: 1vh;
+}
+
+.noSalto{
+    display: inline;
+}
+
+.optionTd{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
+}
+
+.options{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
+}
+
+.arriba{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: end;
+    align-items: center;
+}
+
+.closeSes{
+    text-align: right;
+}
+
+.divEncima{
+    display: none;
+}
+
+@media screen and (max-width:800px){
+
+    main{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width:500px){
+
+    main{
+        padding: 0 0;
+        margin: 0;
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    .tools{
+        padding: 0 3vw;
+    }
+
+    .peds{
+        padding: 0 3vw;
+    }
+
+    .divEncima{
+        display: none;
+        width: 100%;
+        height: 100%;
+        background-color: #1717173d;
+        position: absolute;
+        z-index: 998;
+    }
+
+    input{
+        background-color: #171717;
+        color: #fff8f8;
+        padding: 5px;
+        font-family: 'Montserrat', sans-serif;
+        border-radius: 5px;
+        font-weight: bold;
+        font-size: calc(7px + 1vw);
+    }
+
+    .arriba{
+        background-color: #f7e6d8;
+        padding: 5vw;
+    }
+
+    select{
+        font-size: calc(7px + 1vw);
+    }
+}

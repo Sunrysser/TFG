@@ -1,0 +1,157 @@
+body{
+    background-color: #fff8f8;
+    color: #171717;
+    font-family: 'Roboto Slab', serif;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main{
+    height: 100%;
+    width: 85%;
+    overflow-y: scroll;
+    padding: 2vw;
+}
+
+input, textarea{
+    color: #171717;
+    font-family: 'Roboto Slab', serif;
+    background-color: #f7e6d800;
+    font-size: calc(0.4vw + 10px);
+    border-bottom: #171717 1px solid;
+    width: 100%;
+}
+
+.botones{
+    width: 100%;
+    text-align: center;
+}
+
+.boton{
+    background-color: #171717;
+    color: #f7e6d8;
+    padding: 10px;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 5px;
+    font-weight: bold;
+    width: auto;
+}
+
+.titulin{
+    font-size: calc(0.25vw + 17.5px);
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.first{
+    margin-top: 5vh;
+}
+
+.forms{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
+    justify-self: center;
+    width: 33%;
+    margin: 20vh auto;
+    background-color: #f7e6d8;
+    padding: 5vh;
+    margin-bottom: 1vh;
+    min-height: 50%;
+    border-radius: 15px;
+}
+
+.buttonCat{
+    display: none;
+}
+
+.prodForm{
+    display: none;
+}
+
+.options button{
+    font-size: calc(0.25vw + 17.5px);
+}
+
+select{
+    background-color: #f7e6d8;
+    font-family: 'Roboto Slab', serif;
+    font-weight: bold;
+    font-size: calc(5px + 0.6vw);
+    border-radius: 5px;
+    padding: 1vh;
+}
+
+.arriba{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: end;
+    align-items: center;
+}
+
+.closeSes{
+    text-align: right;
+}
+
+.divEncima{
+    display: none;
+}
+
+@media screen and (max-width:800px){
+
+    main{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width:500px){
+
+    main{
+        padding: 0 0;
+        margin: 0;
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    .tools{
+        padding: 0 3vw;
+    }
+
+    .peds{
+        padding: 0 3vw;
+    }
+
+    .divEncima{
+        display: none;
+        width: 100%;
+        height: 100%;
+        background-color: #1717173d;
+        position: absolute;
+        z-index: 998;
+    }
+
+    input, textarea{
+        color: #171717;
+        font-family: 'Roboto Slab', serif;
+        background-color: #f7e6d800;
+        font-size: calc(10px + 1vw);
+        border-bottom: #171717 1px solid;
+        width: 100%;
+    }
+
+    .arriba{
+        background-color: #f7e6d8;
+        padding: 5vw;
+    }
+
+    select{
+        font-size: calc(7px + 1vw);
+    }
+
+    .forms{
+        width: 95%;
+    }
+}

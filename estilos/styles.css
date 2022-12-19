@@ -1,0 +1,450 @@
+
+
+body{
+    background-color: #171717;
+    color: #fff8f8;
+    font-family: 'Roboto Slab', serif;
+    overflow-x: hidden;
+}
+
+main{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.heroDiv{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.heroImg{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0 1vw;
+}
+
+.imageDiv{
+    width: 50%;
+    padding-left: 9vw;
+    z-index: -1;
+
+}
+
+.image{
+    width: 90%;
+    transform: translateX(-40px) rotateZ(25deg);
+    z-index: -1;
+}
+
+.textito{
+    font-size: calc(10px + 1vw);
+}
+
+.textbuttons p{
+    font-size: calc(10px + 3vw);
+    height: fit-content;
+}
+
+.tittle{
+    font-size: calc(10px + 5vw);
+}
+
+.textbuttons{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+}
+
+.buttonsHero{
+    display: flex;
+    flex-flow: row nowrap;
+    margin-top: 2vh;
+}
+
+.image{
+    z-index: -1;
+}
+
+.usContainer{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../images/fondo.jpg');
+    background-attachment: fixed;
+}
+
+.us{
+    width: 80%;
+    padding: calc(10px + 1.3vw);
+    display: flex;
+    flex-flow: column nowrap;
+    border-radius: 15px;
+}
+
+.usImages{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 0.7vw;
+    padding: 0.7vw;
+    background-color: #ff9966;
+    border-radius: 10px;
+    box-shadow: #854f35 0px 0px 10px;
+    align-self: center;
+}
+
+.usImages img{
+    width: 25vw;
+    height: 20vw;
+}
+
+.usText{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    padding: 1.3vw;
+    width: 100%;
+}
+
+.sobUs{
+    color: #fff8f8;
+    font-size: calc(10px + 3vw);
+    text-align: center;
+    margin-bottom: 2vw;
+}
+
+.usText p{
+    font-size: calc(5px + 1.3vw);
+    text-align: center;
+}
+
+.menuDiv{
+    margin: auto;
+}
+
+.menu{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.pagMenu{
+    width: calc(200px + 17.5vw);
+    border-radius: 15px;
+
+}
+
+.menuText{
+    margin: 5vw 0;
+    text-align: center;
+    font-size: calc(10px + 3vw);
+    font-weight: bold;
+}
+
+/*
+    Botones animados
+    https://codepen.io/Anon_satyam/pen/JjXLoNJ
+*/
+.buttonAni{
+    position: relative;
+    display: inline-flex;
+    width: 10vw;
+    height: 6vh;
+    margin: 0 15px;
+    perspective: 1000px;
+}
+.buttonAni a{
+    letter-spacing: 1px;
+    transform-style: preserve-3d;
+    transform: translateZ(-25px);
+    transition: transform .25s;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: calc(2px + 1vw);
+}
+
+.buttonPed a:before,
+.buttonPed a:after{
+    position: absolute;
+    content: "PEDIR";
+    height: calc(15px + 4.5vh);
+    width: 10vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid #ff9966;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+.buttonRes a:before,
+.buttonRes a:after{
+    position: absolute;
+    content: "RESERVAR";
+    height: calc(15px + 4.5vh);
+    width: 10vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid #ff9966;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+.buttonAni a:before{
+    color: #fff8f8;
+    background: #ff9966;
+    transform: rotateY(0deg) translateZ(25px);
+}
+
+.buttonAni a:after{
+    color: #ff9966;
+    transform: rotateX(90deg) translateZ(25px);
+}
+
+.buttonAni a:hover{
+    transform: translateZ(-25px) rotateX(-90deg);
+}
+
+
+.pageDisplay{
+    background-color: #ffffff00;
+    color: #ff9966;
+    text-align: center;
+    margin-top: -40px;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.menuButtons{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-around;
+    gap: 1vw;
+}
+
+.nextPrev{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #171717;
+    color: #fff8f8;
+    border-radius: 50%;
+    font-size: calc(10px + 2vw);
+    width: calc(9px + 2vw);
+    height: calc(9px + 2vw);
+}
+
+.secondButtons{
+    margin-top: 5px;
+    margin-bottom: 2vh;
+}
+
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+.shaking{
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+}
+
+.boton{
+    display: none;
+}
+
+.logo2{
+    display: none;
+}
+
+.menuBig{
+    display: none;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.menuBig img{
+    width: calc(500px + 5vw);
+    border-radius: 10px;
+}
+
+.menuBig button{
+    background-color: #171717;
+}
+
+@media screen and (max-width:800px){
+    .boton{
+        display: block;
+        min-width: 75px;
+        width: 11vw;
+        height: 4vh;
+        text-align: center;
+        font-size: calc(5px + 1vw);
+        background-color: #ff9966;
+        color: #fff8f8;
+        font-family: 'Montserrat', sans-serif;  
+        font-weight: bold;
+        border-radius: 5px;
+    }
+
+    .buttonsHero{
+        gap: 2vw;
+    }
+
+    .buttonAni{
+        display: none;
+    }
+
+    .menuBig img{
+        width: 90vw;
+    }
+
+    .image{
+        transform: translateY(-20px) rotateZ(0);
+    }
+}
+
+@media screen and (max-width:500px){
+    .boton{
+        width: 30vw;
+        height: 4vh;
+        font-size: calc(10px + 1vw);
+        border-radius: 5px;
+    }
+
+    .heroDiv{
+        width: 100%;
+        padding: 0;
+        height: 100vh;
+        justify-content: center;
+    }
+
+    .imageDiv{
+        position: absolute;
+        top: 20%;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .image{
+        padding: 0;
+        transform: translateY(0) translateX(25px) rotateZ(-10deg);
+    }
+
+    .textito{
+        text-align: center;
+    }
+
+    .tittle{
+        font-size: calc(10px + 15vw);
+        text-align: center;
+    }
+    
+    .textbuttons p{
+        font-size: calc(10px + 10vw);
+        text-align: center;
+        background-color: #17171777;
+    }
+
+    .usContainer{
+        height: 80vh;
+    }
+
+    .us{
+        height: 100%;
+        justify-content: space-around;
+    }
+
+    .usImages{
+        flex-flow: column nowrap;
+        width: 80%;
+        height: 70vh;
+    }
+
+    .usImages img{
+        width: 97.5%;
+        height: 20vh;
+    }
+
+    .logo2{
+        display: flex;
+    }
+
+    .logoP{
+        display: none;
+    }
+
+    .logo p{
+        font-size: calc(20px + 1vw);
+    }
+
+    .arriba{
+        width: 100%;
+        top: 0;
+        background-color: #17171738;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+        position: sticky;
+        padding: 10px 0;
+    }
+
+    .menuBig img{
+        width: 90vw;
+    }
+
+    .buttonsHero{
+        margin-top: 10vh;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .menuDiv{
+        margin: 0;
+        width: 100%;
+    }
+
+    .pagMenu{
+        width: 90%;
+    }
+
+    .menuText{
+        font-size: calc(30px + 1vw);
+    }
+
+    .sobUs{
+        font-size: calc(30px + 1vw);
+    }
+}
+

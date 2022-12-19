@@ -1,0 +1,204 @@
+header{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1vw 4vw;
+    height: 15vh;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.logo{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo p{
+    height: fit-content;
+    color: #ff9966;
+    font-size: calc(10px + 0.7vw);
+    letter-spacing: 2px;
+}
+
+.logo img{
+    width: calc(2vw + 30px);
+}
+
+nav{
+    height: fit-content;
+    font-size: calc(10px + 0.4vw);
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+nav a{
+    margin: 0 1vw;
+    color: #fff8f8;
+    text-decoration: none;
+    padding: 5px;
+}
+
+nav a:active{
+    background-color: #383838;
+    border-radius: 5px;
+}
+
+nav a:hover{
+    border-bottom: 1px solid #fff8f8;
+}
+
+.display{
+    font-family: 'Playball', cursive;
+}
+
+.navB{
+    display: none;
+}
+
+
+@media screen and (max-width:500px){
+    header{
+        background-color: #ff9966;
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: start;
+        align-items: center;
+        position: fixed;
+        z-index: 999;
+        overflow: hidden;
+        left: 100%;
+        width: 50%;
+        transition: all 500ms;
+        padding-top: 10vh;
+    }
+
+    .logo{
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+        height: 10%;
+    }
+    
+    .logo p{
+        height: fit-content;
+        color: #ff9966;
+        text-align: center;
+        font-size: calc(0.3vw + 10px);
+    }
+    
+    .logo img{
+        width: calc(2vw + 30px);
+    }
+    
+    nav{
+        font-size: calc(10px + 0.5vw);
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-around;
+    }
+
+    nav a{
+        font-size: calc(5px + 2vw);
+        margin-bottom: 3vh;
+    }
+
+    nav a:hover{
+        border: 0;
+    }
+
+    nav a:active{
+        background-color: #ff9966;
+        border-radius: 20px;
+    }
+
+    .navB{
+        display: block;
+        transition: all 500ms;
+        font-size: 8vw;
+        padding-left: 5vw;
+        position: fixed;
+        right: 3%;
+        top: 0;
+        z-index: 10001;
+    }
+
+    .menuBig img{
+        width: 95vw;
+    }
+
+    .navB {
+        width: 60px;
+        height: 45px;
+        position: fixed;
+        margin: 10px 0;
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+        -webkit-transition: .5s ease-in-out;
+        -moz-transition: .5s ease-in-out;
+        -o-transition: .5s ease-in-out;
+        transition: .5s ease-in-out;
+        cursor: pointer;
+    }
+    
+    .navB span {
+        display: block;
+        position: absolute;
+        height: 5px;
+        width: 100%;
+        background: #fff8f8;
+        border-radius: 9px;
+        opacity: 1;
+        left: 0;
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+        -webkit-transition: .4s ease-in-out;
+        -moz-transition: .4s ease-in-out;
+        -o-transition: .4s ease-in-out;
+        transition: .4s ease-in-out;
+    }
+    
+    .navB span:nth-child(1) {
+        top: 0px;
+    }
+    
+    .navB span:nth-child(2) {
+        top: 18px;
+    }
+    
+    .navB span:nth-child(3) {
+        top: 36px;
+    }
+    
+    .navB.open span:nth-child(1) {
+        top: 18px;
+        -webkit-transform: rotate(135deg);
+        -moz-transform: rotate(135deg);
+        -o-transform: rotate(135deg);
+        transform: rotate(135deg);
+    }
+    
+    .navB.open span:nth-child(2) {
+        opacity: 0;
+        left: -60px;
+    }
+    
+    .navB.open span:nth-child(3) {
+        top: 18px;
+        -webkit-transform: rotate(-135deg);
+        -moz-transform: rotate(-135deg);
+        -o-transform: rotate(-135deg);
+        transform: rotate(-135deg);
+    }
+
+}
+

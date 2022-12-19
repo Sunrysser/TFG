@@ -1,0 +1,304 @@
+body{
+    background-color: #171717;
+    color: #fff8f8;
+    font-family: 'Roboto Slab', serif;
+}
+
+header{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1vw 4vw;
+    height: 10vh;
+}
+
+main{
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    width: 100%;
+}
+
+footer{
+    height: 10vh;
+}
+
+.logo{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo p{
+    height: fit-content;
+    color: #cfa17e;
+}
+
+.logo img{
+    width: 3.5vw;
+}
+
+.display{
+    font-family: 'Playball', cursive;
+}
+
+nav{
+    height: fit-content;
+}
+
+nav a{
+    margin: 0 1vw;
+}
+
+.heroImg{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0 1vw;
+}
+
+.heroImg img{
+    width: 35%;
+    transform: translateX(-40px) rotateZ(25deg);
+}
+
+.heroImg p{
+    font-size: calc(10px + 3vw);
+    height: fit-content;
+}
+
+span{
+    font-size: calc(10px + 5vw);
+    font-weight: bold;
+    
+}
+
+.textbuttons{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+}
+
+.buttonsM{
+    display: flex;
+    flex-flow: row nowrap;
+    width: fit-content;
+}
+
+.us{
+    background-color: #fff8f8;
+    width: 80%;
+    margin: auto;
+    padding: calc(10px + 1.3vw);
+    display: flex;
+    flex-flow: row nowrap;
+    border-radius: 15px;
+}
+
+.usImages{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+    padding: 10px;
+    background-color: #cfa17e;
+    border-radius: 10px;
+    box-shadow: #9b785d 0px 0px 10px;
+
+}
+
+.vertical{
+    grid-area: 1/2/3/3;
+}
+
+.usImages img{
+    width: 100%;
+    height: 100%;
+}
+
+.usText{
+    padding: 1.3vw;
+    width: 100%;
+}
+
+.us h3{
+    color: #cfa17e;
+    font-size: calc(7px + 2vw);
+}
+
+.us p{
+    color: #171717;
+    font-size: calc(5px + 1.3vw);
+}
+
+.menuDiv{
+    margin: auto;
+}
+
+.menu{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu img{
+    width: 29.5vw;
+    border-radius: 15px;
+
+}
+
+.menuText{
+    margin-top: 10vh;
+    text-align: center;
+    font-size: calc(10px + 3vw);
+    font-weight: bold;
+}
+
+/*
+    Botones animados
+    https://codepen.io/Anon_satyam/pen/JjXLoNJ
+*/
+.buttonAni{
+    position: relative;
+    display: inline-flex;
+    width: 180px;
+    height: 55px;
+    margin: 0 15px;
+    perspective: 1000px;
+}
+.buttonAni a{
+    font-size: 19px;
+    letter-spacing: 1px;
+    transform-style: preserve-3d;
+    transform: translateZ(-25px);
+    transition: transform .25s;
+    font-family: 'Montserrat', sans-serif;  
+}
+
+.buttonCat a:before,
+.buttonCat a:after{
+    position: absolute;
+    content: "CATEGORÍA";
+    height: 55px;
+    width: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid #cfa17e;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+.buttonProd a:before,
+.buttonProd a:after{
+    position: absolute;
+    content: "PRODUCTO";
+    height: 55px;
+    width: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid #cfa17e;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+.buttonAni a:before{
+    color: #fff8f8;
+    background: #cfa17e;
+    transform: rotateY(0deg) translateZ(25px);
+}
+
+.buttonAni a:after{
+    color: #cfa17e;
+    transform: rotateX(90deg) translateZ(25px);
+}
+
+.buttonAni a:hover{
+    transform: translateZ(-25px) rotateX(-90deg);
+}
+
+.buttonCat{
+    display: none;
+}
+
+.prodForm{
+    display: none;
+}
+
+
+.pageDisplay{
+    color: #cfa17e;
+    text-align: center;
+    margin-top: -40px;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.nextPrev{
+    width: 100px;
+    height: 40px;
+    background-color: #fff8f8;
+    font-size: 100%;
+}
+
+.secondButtons{
+    margin-top: 5px;
+    margin-bottom: 2vh;
+}
+
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+.shaking{
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+}
+
+.formHome{
+    display: none;
+}
+
+fieldset{
+    border: 1px solid #fff8f8;
+}
+
+.forms{
+    align-self: flex-start;
+    margin-top: 10vh;
+    color: #fff8f8;
+    font-weight: bold;
+    border-radius: 10px;
+    font-size: calc(0.5vw + 15px);
+}
+
+input{
+    background-color: #171717;
+    border: 1px solid #fff8f8;
+    color: #fff8f8;
+    font-family: 'Roboto Slab', serif;
+    font-size: calc(0.5vw + 10px);
+    border-radius: 5px;
+    width: 100%;
+    height: 4vh;
+}
+

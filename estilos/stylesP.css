@@ -1,0 +1,382 @@
+body{
+    background-color: #171717;
+    background-image: url('../images/fondoP.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff8f8;
+    font-family: 'Roboto Slab', serif;
+}
+
+
+.logo p{
+    height: fit-content;
+    color: #ff9966;
+    background-color: #17171788;
+    padding: 0.5vw;
+    border-radius: 7.5px;
+}
+
+main{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 80%;
+    padding-left: 52vw;
+}
+
+footer{
+    height: 10vh;
+}
+
+.display{
+    font-family: 'Playball', cursive;
+}
+
+span{
+    font-weight: bold;
+}
+
+/*
+    Botones animados
+    https://codepen.io/Anon_satyam/pen/JjXLoNJ
+*/
+.buttonAni{
+    position: relative;
+    display: inline-flex;
+    width: 180px;
+    height: 55px;
+    margin: 0 15px;
+    perspective: 1000px;
+}
+.buttonAni a{
+    font-size: 19px;
+    letter-spacing: 1px;
+    transform-style: preserve-3d;
+    transform: translateZ(-25px);
+    transition: transform .25s;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.buttonHome a:before,
+.buttonHome a:after{
+    position: absolute;
+    content: "A DOMICILIO";
+    height: 55px;
+    width: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid #ff9966;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+.buttonPick a:before,
+.buttonPick a:after{
+    position: absolute;
+    content: "RECOGER";
+    height: 55px;
+    width: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid #ff9966;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+.buttonAni a:before{
+    color: #fff8f8;
+    background: #ff9966;
+    transform: rotateY(0deg) translateZ(25px);
+}
+
+.buttonAni a:after{
+    color: #ff9966;
+    transform: rotateX(90deg) translateZ(25px);
+}
+
+.buttonAni a:hover{
+    transform: translateZ(-25px) rotateX(-90deg);
+}
+
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+.shaking{
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+}
+
+.formHome{
+    display: none;
+    width: 100%;
+}
+
+.formPick{
+    display: none;
+    width: 100%;
+}
+
+fieldset{
+    padding: 2vw;
+    border-radius: 10px;
+}
+
+.legends{
+    text-align: center;
+    margin-bottom: 3vh;
+}
+
+.forms{
+    color: #fff8f8;
+    font-weight: bold;
+    border-radius: 10px;
+    font-size: calc(0.5vw + 15px);
+    min-width: 25vw;
+    max-width: 35vw;
+    display: none;
+    overflow: hidden;
+    max-height: 80vh;
+    overflow-y: overlay;
+    background-color: #17171773;
+}
+
+.inputs{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+input::placeholder{
+    color: #bebebe;
+}
+
+input[type=text]{
+    background-color: #fff8f800;
+    color: #fff8f8;
+    font-family: 'Roboto Slab', serif;
+    font-size: calc(0.5vw + 15px);
+    border-bottom: 1px groove #fff8f8;
+    height: 4vh;
+    width: 100%;
+    margin-bottom: 3vh;
+    padding-left: 9px;
+}
+
+.pedidoPart{
+    display: none;
+}
+
+
+.prodPart{
+    display: none;
+}
+
+.prodPartPick{
+    display: none;
+}
+
+.prodsDiv{
+   display: flex;
+   flex-flow: row wrap;
+   margin-bottom: 10px;
+   font-size: calc(0.5vw + 15px);
+}
+
+.cantidades{
+    height: 30px;
+    width: 40px;
+}
+
+.checks{
+    height: 30px;
+    width: 30px;
+    margin-right: 5px;
+}
+
+.prodInfo{
+    display: inline;
+    width: 100%;
+    font-size: calc(0.5vw + 15px);
+}
+
+.prodDesc{
+    width: 75%;
+    font-size: calc(0.5vw + 10px);
+}
+
+.buttons{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 2vh;
+}
+
+.botone{
+    background-color: #fff8f8;
+    width: 45%;
+    color: #171717;
+    padding: 10px;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.botone:hover{
+    transform: scale(1.1);
+    transition: transform 500ms;
+}
+
+input[type=submit]{
+    background-color: #ff9966;
+    color: #171717;
+}
+
+input[type=submit]:hover{
+    transform: scale(1.1);
+    box-shadow: #171717 0 0 20px 2px;
+    transition: all 500ms;
+}
+
+.prodsCat{
+    text-align: start;
+    margin-bottom: 0;
+}
+
+.logo2{
+    display: none;
+}
+
+.boton{
+    display: none;
+}
+
+.checks{
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.inCheks{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+input[type=checkbox]{
+    width: calc(20px + 1vw);
+    height: calc(20px + 1vw);
+}
+
+@media screen and (max-width:1200px){
+    main{
+        padding-left: 0;
+    }
+
+    .forms{
+        width: 80%;
+        max-width: 100%;
+        background-color: #171717da;
+    }
+}
+
+@media screen and (max-width:800px){
+    .logo{
+        width: 75%;
+        justify-content: start;
+    }
+
+    .forms{
+        width: 80%;
+        max-width: 100%;
+        padding: 3vw;
+    }
+
+    .buttonsM{
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-around;
+        align-items: center;
+        gap: calc(40px + 5vw);
+    }
+
+
+    .boton{
+        display: block;
+        width: calc(50px + 20vw);
+        height: calc(20px + 5vw);
+        background-color: #ff9966;
+        color: #fff8f8;
+        font-family: 'Montserrat', sans-serif;
+        font-size: calc(10px + 1vw);
+        border-radius: 7px;
+        font-weight: bold;
+    }
+
+    .buttonAni{
+        display: none;
+    }
+
+}
+
+@media screen and (max-width:500px){
+
+    main{
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .logo2{
+        display: flex;
+    }
+
+    .logoP{
+        display: none;
+    }
+
+    .logo p{
+        font-size: calc(20px + 1vw);
+    }
+
+    .arriba{
+        width: 100%;
+        top: 0;
+        background-color: #17171738;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+        position: absolute;
+        padding: 10px 0;
+    }
+    .menuBig img{
+        width: 90vw;
+    }
+
+    .forms{
+        width: 80%;
+    }
+}
+
+

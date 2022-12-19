@@ -1,0 +1,152 @@
+body{
+    background-color: #171717;
+    color: #fff8f8;
+
+    font-family: 'Roboto Slab', serif;
+}
+
+main{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    width: 100%;
+}
+
+.pedido{
+    background-color: #444444;
+    width: 90%;
+    padding: calc(0.5vw + 10px);
+    font-size: calc(0.25vw + 15px);
+    border-radius: 5px;
+    height: 90%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.cliente{
+    width: 100%;
+    border-bottom: 1px solid #fff8f8;
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 20px;
+    padding-top: 0;
+    justify-content: space-between;
+    align-items: center;
+    height: 15%;
+}
+
+.info2{
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-bottom: 2vh;
+}
+
+.info{
+    text-align: center;
+}
+
+.titulin{
+    font-size: calc(0.25vw + 25px);
+    font-weight: bold
+}
+
+.lineas{
+    height: 60%;
+    width: 60%;
+    flex-basis: 100%;
+}
+
+.linea{
+    width:100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    background-color: #535353;
+    padding: 1vh;
+}
+
+.prodData{
+    padding: 3.5px;
+    border-radius: 5px;
+}
+
+.precioProd{
+    background-color: #383838;
+}
+
+.total{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.subtotal{
+    text-align: end;
+}
+
+.estado{
+    text-align: center;
+    height: fit-content;
+}
+
+.lineaAbajo{
+    border-bottom: 1px solid #fff8f8;
+    padding-bottom: 5px;
+}
+
+.logo2{
+    display: none;
+}
+
+
+@media screen and (max-width:1200px){
+
+}
+
+@media screen and (max-width:800px){
+    .logo{
+        width: 75%;
+        justify-content: start;
+    }
+
+}
+
+@media screen and (max-width:500px){
+    .pedido{
+        margin-top: 10vh;
+    }
+    .logo2{
+        display: flex;
+    }
+
+    .logoP{
+        display: none;
+    }
+
+    .logo p{
+        font-size: calc(20px + 1vw);
+    }
+
+    .arriba{
+        width: 100%;
+        top: 0;
+        background-color: #17171738;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+        position: absolute;
+        padding: 10px 0;
+    }
+}
