@@ -54,7 +54,7 @@
             $info = Pedido::verInfoxId($idPed);
 
             //si el array esta vacio significa que no existe reserva alguna por ese id
-            if($info['nombreU']){
+            if(empty($info['nombreU'])){
                 echo 'PEDIDO NO ENCONTRADO. Pruebe otro ID.';
             }
 
